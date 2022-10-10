@@ -13,11 +13,7 @@ const Navigation = () => {
   const { currentUser } = useContext(UserContext);
   const { isCartOpen, setIsCartOpen } = useContext(CartContext);
 
-  const handleClick = () => {
-    setIsCartOpen(!isCartOpen);
-    console.log(isCartOpen);
-    console.log("hi");
-  };
+ 
 
   return (
     <Fragment>
@@ -39,7 +35,7 @@ const Navigation = () => {
               SIGN IN
             </Link>
           )}
-          <CartIcon onClick={handleClick} />
+          <CartIcon  />
         </div>
         {isCartOpen && <CartDropdown />}
       </div>
